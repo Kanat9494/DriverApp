@@ -1,14 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             Shell.NavBarIsVisible="False" 
+             Shell.NavBarIsVisible="True" 
              x:Class="DriverApp.Views.HomePage"
-             BackgroundColor="#fff">
+             Title="996708362166"
+             Shell.BackgroundColor="#fff"
+             Shell.TabBarTitleColor="Green"
+             Shell.TitleColor="Green"
+             >
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+            <Label Text="996708362166" x:Name="UserName" />
+            <!--<Label Text="Welcome to Xamarin.Forms!"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                HorizontalOptions="CenterAndExpand" />-->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DriverApp.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +15,9 @@ namespace DriverApp.Views
     {
         public HomePage()
         {
+            //UserName.Text = Application.Current.Properties["UserName"].ToString();
             InitializeComponent();
+            //this.BindingContext = new HomeViewModel();
         }
     }
 }

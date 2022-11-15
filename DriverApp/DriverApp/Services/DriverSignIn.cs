@@ -57,6 +57,7 @@ namespace DriverApp.Services
                     Application.Current.Properties["DriverId"] = driverResponse.DriverId;
                     Application.Current.Properties["UserName"] = driverResponse.UserName;
                     Application.Current.Properties["BusNumber"] = driverResponse.BusNumber;
+                    Application.Current.Properties["InitializedDriver"] = driverResponse;
 
                     return driverResponse;
                 }

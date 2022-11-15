@@ -50,6 +50,8 @@ namespace DriverApp.ViewModels
 
         public LoginViewModel()
         {
+            phoneNumber = "996556781510";
+            password = "test123";
             LoginCommand = new Command(OnLoginClicked);
         }
 
@@ -62,7 +64,10 @@ namespace DriverApp.ViewModels
                 DriverResponse = await DriverSignIn.DriverSignInInstance.AuthenticateDriverAsync(PhoneNumber, Password);
 
                 if (DriverResponse != null)
-                    await Shell.Current.GoToAsync($"//{nameof(AboutPage)}?{nameof(HomeViewModel.DriverResponse)}={DriverResponse}");
+                    //await Shell.Current.GoToAsync($"//{nameof(AboutPage)}?{nameof(HomeViewModel.DriverResponse)}={DriverResponse}");
+                    await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
+                else
+                    await Shell.Current.DisplayAlert("Не удалось войти в систему", "Пожалуйста введите правильные данные", "Ок");
             }
 
         }
