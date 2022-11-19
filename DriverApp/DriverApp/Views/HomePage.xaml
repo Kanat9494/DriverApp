@@ -11,9 +11,8 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="996708362166" x:Name="UserName" />
-            <!--<Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />-->
+            <Button Text="Начать геолокацию" Clicked="Button_Clicked"/>
+            <Label x:Name="locationLable"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

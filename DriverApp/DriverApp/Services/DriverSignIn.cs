@@ -33,7 +33,7 @@ namespace DriverApp.Services
         public DriverSignIn()
         {
             httpClient = new HttpClient();
-            httpClient.BaseAddress = new Uri("http://localhost:5278");
+            httpClient.BaseAddress = new Uri("http://192.168.1.51:45455");
             httpClient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
         }
 
