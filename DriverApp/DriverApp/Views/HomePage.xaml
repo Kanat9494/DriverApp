@@ -10,9 +10,10 @@
              >
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="996708362166" x:Name="UserName" />
-            <Button Text="Начать геолокацию" Clicked="Button_Clicked"/>
-            <Label x:Name="locationLable"/>
+            <Button Text="Старт/Стоп" BackgroundColor="#1aff1a" CornerRadius="10" Clicked="Button_Clicked"
+                    Margin="20"/>
+
+            <Label x:Name="LocationLabel"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

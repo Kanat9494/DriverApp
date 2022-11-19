@@ -25,6 +25,10 @@ namespace DriverApp.Services
         public GetLocationService() 
         {
             httpClient = new HttpClient();
+            httpClient.BaseAddress = new Uri("http://192.168.1.51:45455");
+            httpClient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+
+
             driverId = (int)Application.Current.Properties["DriverId"];
         }
 
@@ -71,8 +75,6 @@ namespace DriverApp.Services
 
         private async Task UpdateDriverLocation(int driverId, double latitude, double longitude)
         {
-            httpClient.BaseAddress = new Uri("http://192.168.1.51:45455");
-            httpClient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
 
             try
             {
