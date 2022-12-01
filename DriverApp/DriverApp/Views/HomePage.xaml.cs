@@ -27,8 +27,6 @@ namespace DriverApp.Views
                     Device.BeginInvokeOnMainThread(() =>
                     {
                         LocationLabel.Text += $"{Environment.NewLine}{message.Latitude}, {message.Longitude}, {DateTime.Now.ToLongTimeString()}";
-
-                        Console.WriteLine($"{message.Latitude}, {message.Longitude}, {DateTime.Now.ToLongTimeString()}");
                     });
                 });
 
@@ -36,7 +34,7 @@ namespace DriverApp.Views
                 {
                     Device.BeginInvokeOnMainThread(() =>
                     {
-                        LocationLabel.Text = "Location Service has been stopped!";
+                        LocationLabel.Text = "Служба определения местоположения остановлена!";
                     });
                 });
 

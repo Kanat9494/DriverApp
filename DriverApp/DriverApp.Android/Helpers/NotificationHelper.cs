@@ -21,7 +21,7 @@ namespace DriverApp.Droid.Helpers
 
             var notificationBuilder = new NotificationCompat.Builder(context, foregroundChannelId)
                 .SetContentTitle("Xamarin.Forms Background Tracking Example")
-                .SetContentText("Your location is being tracked")
+                .SetContentText("Служба отслеживания местоположения запущена!")
                 .SetSmallIcon(Resource.Drawable.location)
                 .SetOngoing(true)
                 .SetContentIntent(pendingIntent);

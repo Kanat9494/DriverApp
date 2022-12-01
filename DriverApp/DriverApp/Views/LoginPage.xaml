@@ -13,7 +13,9 @@
                 <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
-            <Image Grid.Row="0" Margin="0,30" Source="driver_logo.png" Aspect="AspectFit" HeightRequest="130" WidthRequest="80"></Image>
+            <Image Grid.Row="0" Margin="0,30" Source="bus_logo.png" 
+                   Aspect="AspectFit" HeightRequest="130" WidthRequest="80"
+                   IsOpaque="True"></Image>
             <Frame Grid.Row="1" Margin="0,0,0,-40" BorderColor="##e60000" HasShadow="True"  CornerRadius="50" HeightRequest="700">
                 <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="20" Padding="20,50,20,0">
                     <Grid.RowDefinitions>
@@ -28,6 +30,7 @@
                         <RowDefinition Height="Auto"></RowDefinition>
                     </Grid.RowDefinitions>
                     <Label Grid.Row="0"  Text="Добро пожаловать!" FontSize="24" FontAttributes="Bold" TextColor="#313131" HorizontalOptions="CenterAndExpand"></Label>
+                    <ActivityIndicator IsRunning="{Binding RunActivityIndicator}" IsVisible="{Binding RunActivityIndicator}" Grid.Row="0" Color="#1aff1a"/>
                     <Entry Grid.Row="2" Placeholder="ИНН" Margin="0,20,0,0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
                            x:Name="TaxId" Text="{Binding PhoneNumber}"/>
                     <Entry Grid.Row="3" Placeholder="Password" IsPassword="True" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
